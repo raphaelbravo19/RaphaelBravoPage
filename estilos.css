@@ -1,0 +1,195 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.overlay{
+    position: relative;
+    background:url("img/fondo.jpg");
+    box-sizing: border-box;
+    background-position: 50% 0%;
+    display: block;
+    height: 800px;
+}
+.filtro{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    height: 800px;
+}
+header{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; 
+    transition: background-color 0.2s;
+}
+header:hover{
+    background-color: rgba(90, 77, 77, 0.3);
+}
+.logo {
+    width: 50%;
+    font-size: 40px;
+    padding: 0px 20px;
+    margin: 0px 0px 0px 0px;
+    text-align: left;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 330px;
+    height: 50px;
+}
+.nav-item{
+    width: 100px;
+    color: white;
+    padding: 10px 15px;
+    margin: 0px 10px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: background-color 0.2s; 
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px gray;
+    
+}
+.nav-item:hover{
+    background-color: rgba(255, 255, 255, 0.1)
+}
+section{
+    z-index: 1;
+    height: 500px;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+#boton{
+    width: 300px;
+    height: 50px;
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    
+    letter-spacing: 2px;
+    font-size:15px;
+    border: 3px solid #007bff;
+    background-color:transparent;
+    color:#007bff;
+    position: relative;
+    border-radius: 200px;
+    transition: background-color 0.5s, color 0.5s,right 2s;
+    
+}
+.animado{
+    animation: mymove 5s infinite;
+}
+#boton:hover{
+    background-color:#007bff;
+    color:white;
+    cursor: pointer;
+}
+@keyframes mymove{
+    0%{right:0px;}
+    25% {right:30%;}
+    50% {right:-30%;}
+    75% {right:30%}
+    100% {right:-30%}
+}
+.titulo{
+    font-family: 'Courier New', Courier, monospace;
+    
+    
+    height: 100px;
+    
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+.parrafo{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+.content{
+    padding: 50px 5%;
+}
+@media (max-width: 800px){
+    .logo{
+        width: 100%;
+        text-align: center;
+        padding:25px 0px 0px 0px;
+    }
+    .nav-item{
+        width: 33%;
+    }
+    .nav{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        float: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header{
+        padding: 3% 0px 3% 0px;
+        flex-direction: column;
+        height: 140px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    .titulo{
+        font-size:40px; 
+        height: 50px;
+    }
+    .content{
+        padding: 30px 5%;
+    }
+
+}
+@media (max-width: 450px){
+    
+    .parrafo{
+        font-size: 18px;
+    }
+    .titulo{
+        font-size:30px; 
+        height: 50px;
+    }
+}
+@media (max-width: 360px){
+    
+    .logo{
+        font-size: 30px;
+    }
+    header{
+        height: 120px;
+    }
+    .nav-item{
+        font-size:17px; 
+        padding: 8px 0px;
+    }
+    .titulo{
+        font-size:30px; 
+        height: 50px;
+    }
+    #boton{
+        font-size:5px; 
+        width: 70%;
+        height: 40px;
+    }
+    .content{
+        padding: 10px 5%;
+    }
+}
